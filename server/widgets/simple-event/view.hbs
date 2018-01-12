@@ -1,0 +1,39 @@
+{{#if widget.events.length}}
+  {{#ifCond widget.layout "home"}}
+    <div class="container">
+      {{#each widget.events}}
+        {{render-record-teaser modelName='simple-event' record=this locals=../locals}}
+{{!--           <div class="col-md-4 home-event">
+          <div class="panel panel-default">
+            {{#each featuredImage}}
+              <a href="/hotel-event/{{../id}}">
+                <img class="img-responsive home-event-image" src="{{urls.large}}">
+              </a>
+            {{/each}}
+            <div class="panel-body">
+              <h4>
+                <a href="/hotel-event/{{id}}">{{name}}</a>
+              </h4>
+
+              <div class="hotel-event-dates">
+                <div class="hotel-event-date">
+                  <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Início: <strong>{{we-date eventStartDate "DD/MM/YYYY HH:00\h\s" locals=../../locals}}</strong>
+                </div>
+                <div class="hotel-event-registrationDate">
+                  <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> Inscrição: <strong>{{we-date registrationStartDate "DD/MM/YYYY HH:00\h\s" locals=../../locals}}</strong>
+                </div>
+              </div>
+              <p>
+                {{{about}}}
+                <br><a href="/hotel-event/{{id}}">leia mais <i class="glyphicon glyphicon-link"></i></a>
+              </p>
+
+            </div>
+          </div>
+        </div> --}}
+      {{/each}}
+    </div>
+  {{else}}
+    {{!-- TODO! --}}
+  {{/ifCond}}
+{{/if}}
