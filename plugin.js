@@ -27,7 +27,7 @@ module.exports = function loadPlugin(projectPath, Plugin) {
       we.router.metatag.add('simple-eventFindAll', mFindAll);
       we.router.metatag.add('simple-eventFindOne', mFindOne);
     }
-  }
+  };
 
   /**
    * Plugin fast loader for speed up We.js project bootstrap
@@ -42,7 +42,7 @@ module.exports = function loadPlugin(projectPath, Plugin) {
     we.db.modelsConfigs['simple-event'] = require('./server/models/simple-event.js')(we);
 
     done();
-  }
+  };
 
   plugin.setCanonicalURL = require('./lib/metatags/setCanonicalURL.js');
 
