@@ -32,7 +32,6 @@ before(function(callback) {
 
 //after all tests
 after(function (callback) {
-
   we.exit(()=> {
     let tempFolders = [
       projectPath + '/files/tmp',
@@ -49,4 +48,8 @@ after(function (callback) {
     });
   });
 
+});
+
+after(function () {
+  process.exit();
 });
