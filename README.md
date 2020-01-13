@@ -18,4 +18,4 @@ Under [the MIT license](https://github.com/wejs/we-core/blob/master/LICENSE.md)
 
 ## Sponsored by
 
-- Linky Systems: https://linkysystems.com
+- Linky: https://linkysystems.com

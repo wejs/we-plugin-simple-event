@@ -135,11 +135,12 @@ module.exports = function M(we) {
       classMethods: {
         // suport to we.js url alias feature
         urlAlias(record) {
+          const part2 = we.utils.stripTagsAndTruncate(
+            record.name || '', 200
+          );
+
           return {
-            alias: '/eventos/' + record.id + '-'+  we.utils
-              .string( record.name || '' )
-              .truncate(60)
-              .slugify().s,
+            alias: '/eventos/' + record.id + '-'+ part2,
             target: '/simple-event/' + record.id,
           };
         }
